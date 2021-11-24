@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SkinCrabApp.Views.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Margin="0,30,0,30"
+            FontAttributes="Bold"
+            FontSize="Title"
+            HorizontalTextAlignment="Center"
+            Text="Login"
+            VerticalTextAlignment="Center" />
+
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,15,0,0"
+            FontSize="Medium"
+            HorizontalTextAlignment="Center"
+            Text="Nombre Usuario"
+            VerticalTextAlignment="Center" />
+        <Entry
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,15,30,0"
+            HorizontalTextAlignment="Center"
+            Keyboard="Text"
+            Placeholder="Nombre Usuario" />
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="0,15,0,20"
+            FontSize="Medium"
+            HorizontalTextAlignment="Center"
+            Text="Clave"
+            VerticalTextAlignment="Center" />
+        <Entry
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="0,15,30,20"
+            HorizontalTextAlignment="Center"
+            Keyboard="Text"
+            Placeholder="Clave" />
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="10,0,10,80"
+            Text="Aceptar" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="10,0,10,80"
+            Text="Cancelar" />
+        <Image
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            Aspect="AspectFit"
+            Source="crab.png" />
+
+    </Grid>
+</ContentPage>

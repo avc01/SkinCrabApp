@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SkinCrabApp.Views.AutoExamenPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Margin="0,30,0,30"
+                FontAttributes="Bold"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Text="Auto Examen"
+                VerticalTextAlignment="Center" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="20,15,0,0"
+                HorizontalTextAlignment="Center"
+                Text="¿Hace cuánto notó la lesión?"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="20,15,20,0"
+                HorizontalTextAlignment="Center"
+                Keyboard="Numeric"
+                Placeholder="Días" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="20,15,0,0"
+                HorizontalTextAlignment="Center"
+                Text="Nivel de cambio en el tamaño de la lesión"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="20,15,20,0"
+                HorizontalTextAlignment="Center"
+                Keyboard="Numeric"
+                Placeholder="0 al 10" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="20,15,0,0"
+                Text="¿Ha notado hinchazón en la zona de la lesión?" />
+            <Switch
+                Grid.Row="3"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                OnColor="LightBlue"
+                ThumbColor="#2196F3" />
+
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="20,15,0,0"
+                Text="¿Ha notado algún aumento de temperatura en la zona de la lesión?" />
+            <Switch
+                Grid.Row="4"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                OnColor="LightBlue"
+                ThumbColor="#2196F3" />
+
+            <Label
+                Grid.Row="5"
+                Grid.Column="0"
+                Margin="20,15,0,0"
+                Text="¿Ha notado algún enrojecimiento en la zona de la lesión?" />
+            <Switch
+                Grid.Row="5"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                OnColor="LightBlue"
+                ThumbColor="#2196F3" />
+
+            <Label
+                Grid.Row="6"
+                Grid.Column="0"
+                Margin="20,15,0,0"
+                Text="¿Ha notado algún cambio en la textura de la lesión?" />
+            <Switch
+                Grid.Row="6"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                OnColor="LightBlue"
+                ThumbColor="#2196F3" />
+
+            <Label
+                Grid.Row="7"
+                Grid.Column="0"
+                Margin="20,15,0,20"
+                HorizontalTextAlignment="Center"
+                Text="¿Ha notado algún cambio en el color de la lesión?"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="7"
+                Grid.Column="1"
+                Margin="20,15,20,20"
+                HorizontalTextAlignment="Center"
+                Keyboard="Text"
+                Placeholder="Color" />
+
+            <Button
+                Grid.Row="8"
+                Grid.Column="0"
+                Margin="10,0,10,20"
+                Text="Aceptar" />
+            <Button
+                Grid.Row="8"
+                Grid.Column="1"
+                Margin="10,0,10,20"
+                Text="Cancelar" />
+        </Grid>
+
+    </ScrollView>
+
+
+</ContentPage>

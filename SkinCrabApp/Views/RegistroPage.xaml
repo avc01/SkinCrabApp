@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SkinCrabApp.Views.RegistroPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels">
+
+    <ContentPage.BindingContext>
+        <viewmodels:RegistroViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Margin="0,30,0,30"
+                FontAttributes="Bold"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Text="Datos Basicos"
+                VerticalTextAlignment="Center" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Edad"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalTextAlignment="Center"
+                Keyboard="Numeric"
+                Placeholder="Edad" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Genero Biologico"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalTextAlignment="Center"
+                Keyboard="Text"
+                Placeholder="Genero Biologico" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Origen Etnico"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalTextAlignment="Center"
+                Keyboard="Text"
+                Placeholder="Origen Etnico" />
+
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="0,0,0,10"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Color de Piel"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="4"
+                Grid.Column="1"
+                Margin="0,0,50,10"
+                HorizontalTextAlignment="Center"
+                Keyboard="Text"
+                Placeholder="Color de Piel" />
+
+            <Label
+                Grid.Row="5"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="End"
+                Text="Marcas de Nacimiento"
+                VerticalTextAlignment="Center" />
+
+            <Switch
+                Grid.Row="5"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalOptions="Center"
+                OnColor="LightBlue"
+                ThumbColor="#2196F3" />
+
+            <Label
+                Grid.Row="6"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="End"
+                Text="Familiares con Cancer"
+                VerticalTextAlignment="Center" />
+
+            <Switch
+                Grid.Row="6"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalOptions="Center"
+                OnColor="LightBlue"
+                ThumbColor="#2196F3" />
+
+            <Label
+                Grid.Row="7"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="End"
+                Text="Ha sido Diagnosticado"
+                VerticalTextAlignment="Center" />
+
+            <Switch
+                Grid.Row="7"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalOptions="Center"
+                OnColor="LightBlue"
+                ThumbColor="#2196F3" />
+
+            <Label
+                Grid.Row="8"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="End"
+                Text="Recibe Tratamiento"
+                VerticalTextAlignment="Center" />
+
+            <Switch
+                Grid.Row="8"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalOptions="Center"
+                OnColor="LightBlue"
+                ThumbColor="#2196F3" />
+
+            <Label
+                Grid.Row="9"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="End"
+                Text="Tiene Piel Palida"
+                VerticalTextAlignment="Center" />
+
+            <Switch
+                Grid.Row="9"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalOptions="Center"
+                OnColor="LightBlue"
+                ThumbColor="#2196F3" />
+
+            <Label
+                Grid.Row="10"
+                Grid.ColumnSpan="2"
+                Margin="0,30,0,30"
+                FontAttributes="Bold"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Text="Datos de Acceso"
+                VerticalTextAlignment="Center" />
+
+            <Label
+                Grid.Row="11"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Nombre"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="11"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalTextAlignment="Center"
+                Keyboard="Text"
+                Placeholder="Nombre"
+                Text="{Binding Nombre}" />
+
+            <Label
+                Grid.Row="12"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Apellido"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="12"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalTextAlignment="Center"
+                Keyboard="Text"
+                Placeholder="Apellido"
+                Text="{Binding Apellido}" />
+
+            <Label
+                Grid.Row="13"
+                Grid.Column="0"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Nombre Usuario"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="13"
+                Grid.Column="1"
+                Margin="0,0,50,0"
+                HorizontalTextAlignment="Center"
+                Keyboard="Text"
+                Placeholder="Nombre Usuario"
+                Text="{Binding NombreUsuario}" />
+
+            <Label
+                Grid.Row="14"
+                Grid.Column="0"
+                Margin="0,0,0,20"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Clave"
+                VerticalTextAlignment="Center" />
+            <Entry
+                Grid.Row="14"
+                Grid.Column="1"
+                Margin="0,0,50,20"
+                HorizontalTextAlignment="Center"
+                IsPassword="True"
+                Keyboard="Text"
+                Placeholder="Clave"
+                Text="{Binding Clave}" />
+
+            <Button
+                Grid.Row="15"
+                Grid.Column="0"
+                Margin="20,0,20,20"
+                Command="{Binding TapRegisterUser}"
+                CommandParameter="{Binding UsuarioCommand}"
+                Text="Aceptar" />
+            <Button
+                Grid.Row="15"
+                Grid.Column="1"
+                Margin="20,0,20,20"
+                Text="Cancelar" />
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
