@@ -4,11 +4,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+    x:DataType="viewmodels:MenuPageViewModel"
     BackgroundColor="White">
 
     <ContentPage.BindingContext>
         <viewmodels:MenuPageViewModel />
     </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding TapLogout}" Text="Logout" />
+    </ContentPage.ToolbarItems>
 
     <StackLayout>
 
@@ -16,7 +21,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="60" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
@@ -27,7 +35,7 @@
                 Grid.Row="0"
                 Grid.ColumnSpan="2"
                 Margin="20,20,20,20"
-                BackgroundColor="DarkGray"
+                BackgroundColor="#0000c9"
                 CornerRadius="10">
                 <StackLayout Orientation="Horizontal">
                     <Label
@@ -50,64 +58,107 @@
             <Image
                 Grid.Row="1"
                 Grid.ColumnSpan="2"
+                Margin="0,0,0,40"
                 Aspect="AspectFit"
-                Source="crab.png" />
+                Source="crab.jpg" />
 
-            <StackLayout
+            <Frame
+                Grid.Row="2"
+                Grid.RowSpan="4"
+                Grid.Column="0"
+                Margin="10,0,5,0"
+                BackgroundColor="#2296f3"
+                CornerRadius="10"
+                HasShadow="True" />
+
+            <Label
                 Grid.Row="2"
                 Grid.Column="0"
-                Margin="10,20,0,0">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="200" />
-                        <RowDefinition Height="auto" />
-                    </Grid.RowDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        FontAttributes="Italic"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        Text="Tratamiento del Cancer de Piel"
-                        TextColor="Black" />
-                    <Image
-                        Grid.Row="1"
-                        Aspect="AspectFit"
-                        Source="menu1.png" />
-                    <Button
-                        Grid.Row="2"
-                        Command="{Binding TapCommandFirstLink}"
-                        Text="Mas informacion" />
-                </Grid>
-            </StackLayout>
+                Margin="20,5,15,0"
+                FontAttributes="Bold"
+                FontSize="15"
+                HorizontalTextAlignment="Center"
+                Text="Tratamiento del Cancer de Piel"
+                TextColor="Black"
+                VerticalTextAlignment="End" />
 
-            <StackLayout
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="20,0,15,0"
+                FontAttributes="None"
+                FontSize="10"
+                HorizontalTextAlignment="Start"
+                Text="Descubra los mejores tratamientos para combatir el cancer de piel"
+                TextColor="White" />
+
+            <Image
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="20,0,15,0"
+                Aspect="Fill"
+                Source="menu1.jpg" />
+
+            <Button
+                Grid.Row="5"
+                Grid.Column="0"
+                Margin="20,0,15,15"
+                BackgroundColor="White"
+                BorderColor="Black"
+                BorderWidth="2"
+                Command="{Binding TapCommandFirstLink}"
+                CornerRadius="5"
+                Text="Mas informacion" />
+
+            <Frame
+                Grid.Row="2"
+                Grid.RowSpan="4"
+                Grid.Column="1"
+                Margin="5,0,10,0"
+                BackgroundColor="#2296f3"
+                CornerRadius="10"
+                HasShadow="True" />
+
+            <Label
                 Grid.Row="2"
                 Grid.Column="1"
-                Margin="0,20,10,0">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="200" />
-                        <RowDefinition Height="auto" />
-                    </Grid.RowDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        FontAttributes="Italic"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        Text="Tipos de Cancer y Medicamentos"
-                        TextColor="Black" />
-                    <Image
-                        Grid.Row="1"
-                        Aspect="AspectFit"
-                        Source="menu2.png" />
-                    <Button
-                        Grid.Row="2"
-                        Command="{Binding TapCommandSecondLink}"
-                        Text="Mas informacion" />
-                </Grid>
-            </StackLayout>
+                Margin="0,5,0,0"
+                FontAttributes="Bold"
+                FontSize="15"
+                HorizontalTextAlignment="Center"
+                Text="Tipos de Cancer y Medicamentos"
+                TextColor="Black"
+                VerticalTextAlignment="End" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="15,0,20,0"
+                FontAttributes="None"
+                FontSize="10"
+                HorizontalTextAlignment="Start"
+                Text="Conozca los tipos de cancer de piel y sus tratamientos respectivos"
+                TextColor="White" />
+
+            <Image
+                Grid.Row="4"
+                Grid.Column="1"
+                Margin="15,0,20,0"
+                Aspect="Fill"
+                Source="menu2.jpg" />
+
+            <Button
+                Grid.Row="5"
+                Grid.Column="1"
+                Margin="15,0,20,15"
+                BackgroundColor="White"
+                BorderColor="Black"
+                BorderWidth="2"
+                Command="{Binding TapCommandSecondLink}"
+                CornerRadius="5"
+                Text="Mas informacion"
+                TextColor="Black" />
+
         </Grid>
     </StackLayout>
 

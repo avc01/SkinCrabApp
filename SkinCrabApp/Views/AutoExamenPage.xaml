@@ -29,14 +29,16 @@
                 FontSize="Title"
                 HorizontalTextAlignment="Center"
                 Text="Auto Examen"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
 
             <Label
                 Grid.Row="1"
                 Grid.Column="0"
                 Margin="20,15,0,0"
-                HorizontalTextAlignment="Center"
+                HorizontalTextAlignment="Start"
                 Text="¿Hace cuánto notó la lesión?"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
             <Entry
                 Grid.Row="1"
@@ -50,8 +52,9 @@
                 Grid.Row="2"
                 Grid.Column="0"
                 Margin="20,15,0,0"
-                HorizontalTextAlignment="Center"
+                HorizontalTextAlignment="Start"
                 Text="Nivel de cambio en el tamaño de la lesión"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
             <Entry
                 Grid.Row="2"
@@ -65,7 +68,9 @@
                 Grid.Row="3"
                 Grid.Column="0"
                 Margin="20,15,0,0"
-                Text="¿Ha notado hinchazón en la zona de la lesión?" />
+                HorizontalTextAlignment="Start"
+                Text="¿Ha notado hinchazón en la zona de la lesión?"
+                TextColor="Black" />
             <Switch
                 Grid.Row="3"
                 Grid.Column="1"
@@ -77,7 +82,9 @@
                 Grid.Row="4"
                 Grid.Column="0"
                 Margin="20,15,0,0"
-                Text="¿Ha notado algún aumento de temperatura en la zona de la lesión?" />
+                HorizontalTextAlignment="Start"
+                Text="¿Ha notado algún aumento de temperatura en la zona de la lesión?"
+                TextColor="Black" />
             <Switch
                 Grid.Row="4"
                 Grid.Column="1"
@@ -89,7 +96,9 @@
                 Grid.Row="5"
                 Grid.Column="0"
                 Margin="20,15,0,0"
-                Text="¿Ha notado algún enrojecimiento en la zona de la lesión?" />
+                HorizontalTextAlignment="Start"
+                Text="¿Ha notado algún enrojecimiento en la zona de la lesión?"
+                TextColor="Black" />
             <Switch
                 Grid.Row="5"
                 Grid.Column="1"
@@ -101,7 +110,9 @@
                 Grid.Row="6"
                 Grid.Column="0"
                 Margin="20,15,0,0"
-                Text="¿Ha notado algún cambio en la textura de la lesión?" />
+                HorizontalTextAlignment="Start"
+                Text="¿Ha notado algún cambio en la textura de la lesión?"
+                TextColor="Black" />
             <Switch
                 Grid.Row="6"
                 Grid.Column="1"
@@ -113,8 +124,9 @@
                 Grid.Row="7"
                 Grid.Column="0"
                 Margin="20,15,0,20"
-                HorizontalTextAlignment="Center"
+                HorizontalTextAlignment="Start"
                 Text="¿Ha notado algún cambio en el color de la lesión?"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
             <Entry
                 Grid.Row="7"
@@ -126,14 +138,13 @@
 
             <Button
                 Grid.Row="8"
-                Grid.Column="0"
-                Margin="10,0,10,20"
+                Grid.ColumnSpan="2"
+                Margin="70,0,70,20"
+                BackgroundColor="White"
+                BorderColor="Black"
+                BorderWidth="1"
+                CornerRadius="5"
                 Text="Aceptar" />
-            <Button
-                Grid.Row="8"
-                Grid.Column="1"
-                Margin="10,0,10,20"
-                Text="Cancelar" />
         </Grid>
 
     </ScrollView>

@@ -1,7 +1,9 @@
 ﻿using MvvmHelpers;
 using MvvmHelpers.Commands;
+using SkinCrabApp.Views;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace SkinCrabApp.ViewModels
 {
@@ -11,10 +13,13 @@ namespace SkinCrabApp.ViewModels
 
         public AsyncCommand TapCommandSecondLink { get; set; }
 
+        public AsyncCommand TapLogout { get; set; }
+
         public MenuPageViewModel()
         {
             TapCommandFirstLink = new AsyncCommand(TapFirstLink);
             TapCommandSecondLink = new AsyncCommand(TapSecondLink);
+            TapLogout = new AsyncCommand(TapLogoutUser);
         }
 
         public async Task TapFirstLink() 
@@ -25,6 +30,11 @@ namespace SkinCrabApp.ViewModels
         public async Task TapSecondLink()
         {
             await Launcher.OpenAsync("https://www.cdc.gov/spanish/cancer/skin/basic_info/index.htm");
+        }
+
+        public async Task TapLogoutUser() 
+        { 
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
     }
 }

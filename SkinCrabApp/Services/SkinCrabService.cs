@@ -41,6 +41,14 @@ namespace SkinCrabApp.Services
             return result;
         }
 
+        public static async Task<Usuario> GetUsuarioByUserName(string userName)
+        {
+            await Init();
+            var query = _database.Table<Usuario>().Where(x => x.NombreUsuario == userName);
+            var result = await query.FirstOrDefaultAsync();
+            return result;
+        }
+
         public static async Task CreateUsuario(Usuario usuario)
         {
             await Init();

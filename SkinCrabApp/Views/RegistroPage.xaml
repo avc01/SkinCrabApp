@@ -3,10 +3,12 @@
     x:Class="SkinCrabApp.Views.RegistroPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels">
+    xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+    x:DataType="viewmodels:RegistroPageViewModel"
+    Shell.FlyoutBehavior="Disabled">
 
     <ContentPage.BindingContext>
-        <viewmodels:RegistroViewModel />
+        <viewmodels:RegistroPageViewModel />
     </ContentPage.BindingContext>
 
     <ScrollView>
@@ -40,6 +42,7 @@
                 FontSize="Title"
                 HorizontalTextAlignment="Center"
                 Text="Datos Basicos"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
 
             <Label
@@ -48,14 +51,17 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="Center"
                 Text="Edad"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="1"
                 Grid.Column="1"
                 Margin="0,0,50,0"
                 HorizontalTextAlignment="Center"
                 Keyboard="Numeric"
-                Placeholder="Edad" />
+                Placeholder="Edad"
+                Text="{Binding UsuarioCommand.Edad}" />
 
             <Label
                 Grid.Row="2"
@@ -63,14 +69,17 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="Center"
                 Text="Genero Biologico"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="2"
                 Grid.Column="1"
                 Margin="0,0,50,0"
                 HorizontalTextAlignment="Center"
                 Keyboard="Text"
-                Placeholder="Genero Biologico" />
+                Placeholder="Genero Biologico"
+                Text="{Binding UsuarioCommand.Genero}" />
 
             <Label
                 Grid.Row="3"
@@ -78,14 +87,17 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="Center"
                 Text="Origen Etnico"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="3"
                 Grid.Column="1"
                 Margin="0,0,50,0"
                 HorizontalTextAlignment="Center"
                 Keyboard="Text"
-                Placeholder="Origen Etnico" />
+                Placeholder="Origen Etnico"
+                Text="{Binding UsuarioCommand.Etnia}" />
 
             <Label
                 Grid.Row="4"
@@ -94,14 +106,17 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="Center"
                 Text="Color de Piel"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="4"
                 Grid.Column="1"
                 Margin="0,0,50,10"
                 HorizontalTextAlignment="Center"
                 Keyboard="Text"
-                Placeholder="Color de Piel" />
+                Placeholder="Color de Piel"
+                Text="{Binding UsuarioCommand.Color}" />
 
             <Label
                 Grid.Row="5"
@@ -109,6 +124,7 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="End"
                 Text="Marcas de Nacimiento"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
 
             <Switch
@@ -116,6 +132,7 @@
                 Grid.Column="1"
                 Margin="0,0,50,0"
                 HorizontalOptions="Center"
+                IsToggled="{Binding UsuarioCommand.MarcasNacimiento}"
                 OnColor="LightBlue"
                 ThumbColor="#2196F3" />
 
@@ -125,6 +142,7 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="End"
                 Text="Familiares con Cancer"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
 
             <Switch
@@ -132,6 +150,7 @@
                 Grid.Column="1"
                 Margin="0,0,50,0"
                 HorizontalOptions="Center"
+                IsToggled="{Binding UsuarioCommand.HistorialMedico}"
                 OnColor="LightBlue"
                 ThumbColor="#2196F3" />
 
@@ -141,6 +160,7 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="End"
                 Text="Ha sido Diagnosticado"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
 
             <Switch
@@ -148,6 +168,7 @@
                 Grid.Column="1"
                 Margin="0,0,50,0"
                 HorizontalOptions="Center"
+                IsToggled="{Binding UsuarioCommand.Diagnosticado}"
                 OnColor="LightBlue"
                 ThumbColor="#2196F3" />
 
@@ -157,6 +178,7 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="End"
                 Text="Recibe Tratamiento"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
 
             <Switch
@@ -164,6 +186,7 @@
                 Grid.Column="1"
                 Margin="0,0,50,0"
                 HorizontalOptions="Center"
+                IsToggled="{Binding UsuarioCommand.Tratamiento}"
                 OnColor="LightBlue"
                 ThumbColor="#2196F3" />
 
@@ -173,6 +196,7 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="End"
                 Text="Tiene Piel Palida"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
 
             <Switch
@@ -180,6 +204,7 @@
                 Grid.Column="1"
                 Margin="0,0,50,0"
                 HorizontalOptions="Center"
+                IsToggled="{Binding UsuarioCommand.PielPalida}"
                 OnColor="LightBlue"
                 ThumbColor="#2196F3" />
 
@@ -191,6 +216,7 @@
                 FontSize="Title"
                 HorizontalTextAlignment="Center"
                 Text="Datos de Acceso"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
 
             <Label
@@ -199,7 +225,9 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="Center"
                 Text="Nombre"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="11"
                 Grid.Column="1"
@@ -207,7 +235,7 @@
                 HorizontalTextAlignment="Center"
                 Keyboard="Text"
                 Placeholder="Nombre"
-                Text="{Binding Nombre}" />
+                Text="{Binding UsuarioCommand.Nombre}" />
 
             <Label
                 Grid.Row="12"
@@ -215,7 +243,9 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="Center"
                 Text="Apellido"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="12"
                 Grid.Column="1"
@@ -223,7 +253,7 @@
                 HorizontalTextAlignment="Center"
                 Keyboard="Text"
                 Placeholder="Apellido"
-                Text="{Binding Apellido}" />
+                Text="{Binding UsuarioCommand.Apellido}" />
 
             <Label
                 Grid.Row="13"
@@ -231,7 +261,9 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="Center"
                 Text="Nombre Usuario"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="13"
                 Grid.Column="1"
@@ -239,7 +271,7 @@
                 HorizontalTextAlignment="Center"
                 Keyboard="Text"
                 Placeholder="Nombre Usuario"
-                Text="{Binding NombreUsuario}" />
+                Text="{Binding UsuarioCommand.NombreUsuario}" />
 
             <Label
                 Grid.Row="14"
@@ -248,7 +280,9 @@
                 FontSize="Medium"
                 HorizontalTextAlignment="Center"
                 Text="Clave"
+                TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="14"
                 Grid.Column="1"
@@ -257,19 +291,29 @@
                 IsPassword="True"
                 Keyboard="Text"
                 Placeholder="Clave"
-                Text="{Binding Clave}" />
+                Text="{Binding UsuarioCommand.Clave}" />
 
             <Button
                 Grid.Row="15"
                 Grid.Column="0"
                 Margin="20,0,20,20"
+                BackgroundColor="White"
+                BorderColor="Black"
+                BorderWidth="1"
                 Command="{Binding TapRegisterUser}"
                 CommandParameter="{Binding UsuarioCommand}"
+                CornerRadius="5"
                 Text="Aceptar" />
+
             <Button
                 Grid.Row="15"
                 Grid.Column="1"
                 Margin="20,0,20,20"
+                BackgroundColor="White"
+                BorderColor="Black"
+                BorderWidth="1"
+                Command="{Binding TapCancelar}"
+                CornerRadius="5"
                 Text="Cancelar" />
 
         </Grid>
