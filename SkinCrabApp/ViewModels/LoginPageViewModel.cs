@@ -58,7 +58,9 @@ namespace SkinCrabApp.ViewModels
                 Preferences.Set("currentUser_UsuarioId", $"{result.IdUsuario}");
             });
             await CleanFields();
-            await Shell.Current.GoToAsync($"//{nameof(MenuPage)}");
+           // await Shell.Current.GoToAsync($"//{nameof(MenuPage)}");
+            await Shell.Current.GoToAsync($"{nameof(DeteccionPage)}");
+
         }
 
         public async Task RegistrarUser()
