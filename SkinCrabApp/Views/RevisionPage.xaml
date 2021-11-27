@@ -1,15 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SkinCrabApp.Views.RevisionPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+             x:Class="SkinCrabApp.Views.RevisionPage"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False">
+
+
+    <ContentPage.BindingContext>
+        <viewmodels:RevisionPageViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <Image Source="revision.jpg" HorizontalOptions="Center" VerticalOptions="Center"/>
 
             <Label  FontSize="Large" HorizontalOptions="Center" Text="Revisión de Dictamenes"/>
 
-            <Label FontAttributes="Italic" FontSize="Medium" HorizontalOptions="Center" Text="Podra revisar los
-                   dictamenes realizados anteriormente y sus resultados"/>
+            <Label FontAttributes="Italic" FontSize="Medium"  Margin="30,0,30,50" HorizontalTextAlignment="Center"
+                   Text="Podra revisar los dictamenes realizados anteriormente y sus resultados"/>
             <Button VerticalOptions="Center"
             
             BackgroundColor="White"

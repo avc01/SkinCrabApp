@@ -59,7 +59,7 @@ namespace SkinCrabApp.ViewModels
             });
             await CleanFields();
            // await Shell.Current.GoToAsync($"//{nameof(MenuPage)}");
-            await Shell.Current.GoToAsync($"//{nameof(DeteccionPage)}");
+            await Shell.Current.GoToAsync($"{nameof(DeteccionPage)}");
 
         }
 

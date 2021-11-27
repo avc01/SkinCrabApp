@@ -1,15 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SkinCrabApp.Views.DeteccionPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels" x:DataType="viewmodels:DeteccionPageViewModel"
+             Shell.FlyoutBehavior="Disabled"
+             x:Class="SkinCrabApp.Views.DeteccionPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <viewmodels:DeteccionPageViewModel />
+    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <StackLayout>
             <Image Source="detec.jpg" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-            <Label  FontSize="Large" HorizontalOptions="Center" Text="Detección Temprana"/>
+            <Label  FontSize="Title" HorizontalOptions="Center" Text="Detección Temprana"/>
 
-            <Label FontAttributes="Italic" FontSize="Medium" HorizontalOptions="Center" Text="
-                   El autoexamen solicitará completar algunas preguntas para la detección temprana de posibles problemas en la piel"/>
+            <Label FontAttributes="Italic" FontSize="Medium"  Margin="30,0,30,50" HorizontalTextAlignment="Center"
+                   Text="El autoexamen solicitará completar algunas preguntas para la detección temprana de posibles problemas en la piel"/>
             <Button VerticalOptions="Center"
             
             BackgroundColor="White"

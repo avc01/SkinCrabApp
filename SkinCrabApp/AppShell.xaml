@@ -105,16 +105,6 @@
     <FlyoutItem Title="Logout" Icon="login.png">
         <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" Route="LoginPage" />
     </FlyoutItem>
-    <FlyoutItem Title="Deteccion" Icon="detec.jpg">
-        <ShellContent ContentTemplate="{DataTemplate local:DeteccionPage}" Route="DeteccionPage" />
-    </FlyoutItem>
-    <FlyoutItem Title="Revision" Icon="revision.jpg">
-        <ShellContent ContentTemplate="{DataTemplate local:RevisionPage}" Route="RevisionPage" />
-    </FlyoutItem>
-    <FlyoutItem Title="Centros Medicos" Icon="hospit.jpg">
-        <ShellContent ContentTemplate="{DataTemplate local:CentrosMedicosPage}" Route="CentrosMedicosPage" />
-    </FlyoutItem>
-    <FlyoutItem Title="Info" Icon="info.jpg">
-        <ShellContent ContentTemplate="{DataTemplate local:InfoPage}" Route="InfoPage" />
-    </FlyoutItem>
+    
+    
 </Shell>

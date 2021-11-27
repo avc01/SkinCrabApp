@@ -10,18 +10,18 @@ using Xamarin.Forms;
 
 namespace SkinCrabApp.ViewModels
 {
-    public class DeteccionPageViewModel : ObservableObject
+    public class InfoPageViewModel : ObservableObject
     {
         public AsyncCommand TapLogin { get; set; }
 
-        public DeteccionPageViewModel()
+        public InfoPageViewModel()
         {
             TapLogin = new AsyncCommand(LogUser);
         }
 
         public async Task LogUser()
         {
-            await Shell.Current.GoToAsync($"{nameof(RevisionPage)}");
+            await Shell.Current.GoToAsync($"//{nameof(MenuPage)}");
         }
 
     }
