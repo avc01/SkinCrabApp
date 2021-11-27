@@ -2,7 +2,13 @@
 <ContentPage
     x:Class="SkinCrabApp.Views.AutoExamenPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+    x:DataType="viewmodels:AutoExamenViewModel">
+
+    <ContentPage.BindingContext>
+        <viewmodels:AutoExamenViewModel />
+    </ContentPage.BindingContext>
 
     <ScrollView>
         <Grid>
@@ -21,6 +27,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
+
             <Label
                 Grid.Row="0"
                 Grid.ColumnSpan="2"
@@ -40,13 +47,15 @@
                 Text="¿Hace cuánto notó la lesión?"
                 TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="1"
                 Grid.Column="1"
                 Margin="20,15,20,0"
                 HorizontalTextAlignment="Center"
                 Keyboard="Numeric"
-                Placeholder="Días" />
+                Placeholder="Días"
+                Text="{Binding AutoExamenCommand.HaceCuantoNotoLaLesion}" />
 
             <Label
                 Grid.Row="2"
@@ -56,13 +65,15 @@
                 Text="Nivel de cambio en el tamaño de la lesión"
                 TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="2"
                 Grid.Column="1"
                 Margin="20,15,20,0"
                 HorizontalTextAlignment="Center"
                 Keyboard="Numeric"
-                Placeholder="0 al 10" />
+                Placeholder="0 al 10"
+                Text="{Binding AutoExamenCommand.NivelDeCambioTamanoDeLaLesion}" />
 
             <Label
                 Grid.Row="3"
@@ -71,10 +82,12 @@
                 HorizontalTextAlignment="Start"
                 Text="¿Ha notado hinchazón en la zona de la lesión?"
                 TextColor="Black" />
+
             <Switch
                 Grid.Row="3"
                 Grid.Column="1"
                 HorizontalOptions="Center"
+                IsToggled="{Binding AutoExamenCommand.HinchazonLesion}"
                 OnColor="LightBlue"
                 ThumbColor="#2196F3" />
 
@@ -85,10 +98,12 @@
                 HorizontalTextAlignment="Start"
                 Text="¿Ha notado algún aumento de temperatura en la zona de la lesión?"
                 TextColor="Black" />
+
             <Switch
                 Grid.Row="4"
                 Grid.Column="1"
                 HorizontalOptions="Center"
+                IsToggled="{Binding AutoExamenCommand.AumentoTemperaturaDeLaLesion}"
                 OnColor="LightBlue"
                 ThumbColor="#2196F3" />
 
@@ -99,10 +114,12 @@
                 HorizontalTextAlignment="Start"
                 Text="¿Ha notado algún enrojecimiento en la zona de la lesión?"
                 TextColor="Black" />
+
             <Switch
                 Grid.Row="5"
                 Grid.Column="1"
                 HorizontalOptions="Center"
+                IsToggled="{Binding AutoExamenCommand.EnrojecimientoZonaDeLaLesion}"
                 OnColor="LightBlue"
                 ThumbColor="#2196F3" />
 
@@ -113,10 +130,12 @@
                 HorizontalTextAlignment="Start"
                 Text="¿Ha notado algún cambio en la textura de la lesión?"
                 TextColor="Black" />
+
             <Switch
                 Grid.Row="6"
                 Grid.Column="1"
                 HorizontalOptions="Center"
+                IsToggled="{Binding AutoExamenCommand.CambioEnLaTexturaDeLaLesion}"
                 OnColor="LightBlue"
                 ThumbColor="#2196F3" />
 
@@ -128,13 +147,15 @@
                 Text="¿Ha notado algún cambio en el color de la lesión?"
                 TextColor="Black"
                 VerticalTextAlignment="Center" />
+
             <Entry
                 Grid.Row="7"
                 Grid.Column="1"
                 Margin="20,15,20,20"
                 HorizontalTextAlignment="Center"
                 Keyboard="Text"
-                Placeholder="Color" />
+                Placeholder="Color"
+                Text="{Binding AutoExamenCommand.CambioColorDeLaLesion}" />
 
             <Button
                 Grid.Row="8"
@@ -143,6 +164,8 @@
                 BackgroundColor="White"
                 BorderColor="Black"
                 BorderWidth="1"
+                Command="{Binding TapSubmit}"
+                CommandParameter="{Binding AutoExamenCommand}"
                 CornerRadius="5"
                 Text="Aceptar" />
         </Grid>

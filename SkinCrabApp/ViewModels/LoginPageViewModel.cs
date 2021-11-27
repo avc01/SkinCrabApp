@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace SkinCrabApp.ViewModels
@@ -48,6 +49,14 @@ namespace SkinCrabApp.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Atencion", "clave incorrecta", "ok");
                 return;
             }
+
+            await Task.Run(() => 
+            {
+                Preferences.Set("currentUser_Name", $"{result.Nombre}");
+                Preferences.Set("currentUser_LastName", $"{result.Apellido}");
+                Preferences.Set("currentUser_NombreUsuario", $"{result.NombreUsuario}");
+                Preferences.Set("currentUser_UsuarioId", $"{result.IdUsuario}");
+            });
             await CleanFields();
             await Shell.Current.GoToAsync($"//{nameof(MenuPage)}");
         }

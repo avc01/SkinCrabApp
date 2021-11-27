@@ -1,5 +1,6 @@
 ﻿using MvvmHelpers;
 using MvvmHelpers.Commands;
+using SkinCrabApp.Helpers;
 using SkinCrabApp.Models;
 using SkinCrabApp.Services;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace SkinCrabApp.ViewModels
         public RegistroPageViewModel()
         {
             TapRegisterUser = new AsyncCommand<Usuario>(CreateUsuario);
-            TapCancelar = new AsyncCommand(CleanFields);
+            TapCancelar = new AsyncCommand(CleanFieldsAsync);
 
             UsuarioCommand = new Usuario();
         }
@@ -30,11 +31,12 @@ namespace SkinCrabApp.ViewModels
             }
             
             await SkinCrabService.CreateUsuario(usuario);
+            await DataFile.SaveUserDataToFileAsync(usuario);
             await Application.Current.MainPage.DisplayAlert("Notificacion", "usuario creado exitosamente", "ok");
-            await CleanFields();
+            await CleanFieldsAsync();
         }
 
-        public async Task CleanFields()
+        public async Task CleanFieldsAsync()
         {
             foreach (var item in UsuarioCommand.GetType().GetProperties())
             {

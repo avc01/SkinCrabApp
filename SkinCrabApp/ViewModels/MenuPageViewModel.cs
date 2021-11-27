@@ -22,7 +22,7 @@ namespace SkinCrabApp.ViewModels
             TapLogout = new AsyncCommand(TapLogoutUser);
         }
 
-        public async Task TapFirstLink() 
+        public async Task TapFirstLink()
         {
             await Launcher.OpenAsync("https://www.cancer.gov/espanol/tipos/piel/paciente/tratamiento-piel-pdq");
         }
@@ -32,8 +32,8 @@ namespace SkinCrabApp.ViewModels
             await Launcher.OpenAsync("https://www.cdc.gov/spanish/cancer/skin/basic_info/index.htm");
         }
 
-        public async Task TapLogoutUser() 
-        { 
+        public async Task TapLogoutUser()
+        {
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
     }
