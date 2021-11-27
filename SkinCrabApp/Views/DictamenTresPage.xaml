@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SkinCrabApp.Views.DictamenTresPage">
+    <ContentPage.Content>
+
+
+        <StackLayout BackgroundColor="White">
+
+            <Frame BackgroundColor="LightBlue" Padding="20" CornerRadius="0">
+                <Label Text="Melanoma" HorizontalTextAlignment="Center" TextColor="Black" FontSize="30"/>
+            </Frame>
+
+            <Image Source="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/43/ds00190_-ds00439_im04411_mcdc7_melanomathu_jpg.jpg"/>
+
+            <Frame BackgroundColor="LightGray" Padding="30" CornerRadius="0">
+                <Label Text="El melanoma, el tipo más grave de cáncer de piel, se forma en las células que producen melanina, el pigmento que le da color a la piel. El melanoma también puede manifestarse en los ojos y, rara vez, dentro del cuerpo, como en la nariz o la garganta." HorizontalTextAlignment="Start" TextColor="Black" FontSize="20"/>
+            </Frame>
+            <Frame BackgroundColor="LightGray" Padding="30" CornerRadius="0">
+                <Label Text="Ir a su médico o especialista lo más antes posible, puede utilizar esta aplicación para contactar con nuestros especialistas." HorizontalTextAlignment="Start" TextColor="Black" FontSize="20"/>
+            </Frame>
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
