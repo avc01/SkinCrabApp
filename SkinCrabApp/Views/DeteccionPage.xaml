@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SkinCrabApp.Views.DeteccionPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="hospital.jpg" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+
+            
+            <Label FontAttributes="Italic" FontSize="Large" HorizontalOptions="Center" Text="Detección Temprana"/>
+
+            <Label FontAttributes="Italic" FontSize="Medium" HorizontalOptions="Center" Text="
+                   El autoexamen solicitará completar algunas preguntas para la detección temprana de posibles problemas en la piel"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

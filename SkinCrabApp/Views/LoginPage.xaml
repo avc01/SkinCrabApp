@@ -86,7 +86,7 @@
             BorderWidth="1"
             Command="{Binding TapLogin}"
             CornerRadius="5"
-            Text="Aceptar" />
+            Text="Log in" />
 
         <Label
             Grid.Row="4"
