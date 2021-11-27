@@ -1,9 +1,5 @@
 ﻿using SkinCrabApp.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,6 +13,7 @@ namespace SkinCrabApp.Views
         {
             get; private set;
         }
+
         public ClinicaPage()
         {
             InitializeComponent();
@@ -59,13 +56,11 @@ namespace SkinCrabApp.Views
                 Nombre = "Clinica Sin Fronteras",
                 Telefono = "+50622226285",
                 Direccion = "La Sabana",
-                Url = "https://lh3.googleusercontent.com/proxy/v5CnSSwnBbbRgpqYGNSwYNhJWap0_jbFTPcWjSQDXPbOwfsbWuxrSFy4YamX7_awL7ImCzYo8dapy31jGmxEWLXNBE46eYMN1nKU3A"
+                Url = "https://lh3.googleusercontent.com/proxy/EVmNEK7wPMniKYz7Z7P3OHzJ24S9gXEFevYXoZgf5q1-COuiOAfJQCay5uMox6U_DgL-XiSVKoLiyXuvvJenTJncNLQbcmWcArd58w"
             });
-
-
-
             BindingContext = this;
         }
+
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Clinica selectedItem = e.SelectedItem as Clinica;
@@ -76,4 +71,4 @@ namespace SkinCrabApp.Views
             Clinica tappedItem = e.Item as Clinica;
         }
     }
-    }
+}

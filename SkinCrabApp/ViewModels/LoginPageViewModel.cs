@@ -38,7 +38,7 @@ namespace SkinCrabApp.ViewModels
 
             var result = await SkinCrabService.GetUsuarioByUserName(NombreUsuario);
 
-            if (result == null)
+            if (result is null)
             {
                 await Application.Current.MainPage.DisplayAlert("Atencion", "usuario no encontrado", "ok");
                 return;
