@@ -105,6 +105,4 @@
     <FlyoutItem Title="Logout" Icon="login.png">
         <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" Route="LoginPage" />
     </FlyoutItem>
-    
-    
 </Shell>
