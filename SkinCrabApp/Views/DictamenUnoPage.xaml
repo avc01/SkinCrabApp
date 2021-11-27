@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SkinCrabApp.Views.DictamenUnoPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+
+            <Frame BackgroundColor="LightBlue" Padding="20" CornerRadius="0">
+                <Label Text="Carcinoma de células Basales" HorizontalTextAlignment="Center" TextColor="Black" FontSize="30"/>
+            </Frame>
+
+            <Image Source="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/42/ds00190_-ds00925_im00272_basal_gif.jpg"/>
+
+            <Frame BackgroundColor="LightGray" Padding="30" CornerRadius="0">
+                <Label Text="El carcinoma basocelular es un tipo de cáncer de piel que comienza en las células basales, un tipo de células que se encuentran en la piel y que producen las células cutáneas nuevas a medida que las viejas mueren." HorizontalTextAlignment="Start" TextColor="Black" FontSize="20"/>
+            </Frame>
+            <Frame BackgroundColor="LightGray" Padding="30" CornerRadius="0">
+                <Label Text="Ir a su médico o especialista lo más antes posible, en caso que desee puede utilizar esta aplicación para contactar con uno de nuestros especialistas." HorizontalTextAlignment="Start" TextColor="Black" FontSize="20"/>
+            </Frame>
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
