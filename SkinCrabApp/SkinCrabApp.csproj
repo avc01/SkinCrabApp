@@ -14,6 +14,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\RevisionPage.xaml.cs">
+      <DependentUpon>RevisionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\InfoPage.xaml.cs">
+      <DependentUpon>InfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CentrosMedicosPage.xaml.cs">
+      <DependentUpon>CentrosMedicosPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\DeteccionPage.xaml.cs">
       <DependentUpon>DeteccionPage.xaml</DependentUpon>
     </Compile>

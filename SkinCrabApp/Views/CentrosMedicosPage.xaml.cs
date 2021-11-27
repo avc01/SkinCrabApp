@@ -10,14 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace SkinCrabApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DeteccionPage : ContentPage
+    public partial class CentrosMedicosPage : ContentPage
     {
-        public DeteccionPage()
+        public CentrosMedicosPage()
         {
             InitializeComponent();
-            
+           
         }
-
-       
     }
 }
