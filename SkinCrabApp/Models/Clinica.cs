@@ -14,12 +14,18 @@ namespace SkinCrabApp.Models
         public string Nombre { get; set; }
 
         [NotNull]
-        public string Telefono { get; set; }
+        public string Telefono { get => $"Teléfono: {_telefono}"; set => _telefono = value; }
 
         [NotNull]
-        public string Direccion { get; set; }
+        public string Direccion { get => $"Dirección: {_direccion}"; set => _direccion = value; }
 
         [NotNull, Indexed]
         public int IdEmfermedad { get; set; }
+
+        [Ignore]
+        public string Url { get; set; }
+
+        private string _direccion;
+        private string _telefono;
     }
 }
