@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+             x:Class="SkinCrabApp.Views.CentrosMedicosPage"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:CentrosMedicosPageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="hospit.jpg" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label  FontSize="Title" HorizontalOptions="Center" Text="Centros Medicos"/>
+
+            <Label FontAttributes="Italic" FontSize="Medium"  Margin="30,0,30,50" HorizontalTextAlignment="Center"
+                   Text="Aqui podrá observar algunos de los centros medicos disponibles para el cuidado de la piel"/>
+            <Button VerticalOptions="Center"
+            BackgroundColor="White"
+            BorderColor="Black"
+            BorderWidth="1"
+            CornerRadius="5"
+            Margin="100,0,100,20"
+            Text="Siguiente" Command="{Binding TapLogin}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
