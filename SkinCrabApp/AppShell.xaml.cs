@@ -10,6 +10,7 @@ namespace SkinCrabApp
             InitializeComponent();
 
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+            Routing.RegisterRoute(nameof(MenuPage), typeof(MenuPage));
             Routing.RegisterRoute(nameof(RegistroPage), typeof(RegistroPage));
             Routing.RegisterRoute(nameof(ClinicaPage), typeof(ClinicaPage));
             Routing.RegisterRoute(nameof(AutoExamenPage), typeof(AutoExamenPage));
@@ -18,9 +19,6 @@ namespace SkinCrabApp
             Routing.RegisterRoute(nameof(RevisionPage), typeof(RevisionPage));
             Routing.RegisterRoute(nameof(CentrosMedicosPage), typeof(CentrosMedicosPage));
             Routing.RegisterRoute(nameof(InfoPage), typeof(InfoPage));
-
-
-
         }
     }
 }

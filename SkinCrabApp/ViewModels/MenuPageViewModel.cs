@@ -20,8 +20,6 @@ namespace SkinCrabApp.ViewModels
             TapCommandFirstLink = new AsyncCommand(TapFirstLink);
             TapCommandSecondLink = new AsyncCommand(TapSecondLink);
             TapLogout = new AsyncCommand(TapLogoutUser);
-            
-
         }
 
         public async Task TapFirstLink()

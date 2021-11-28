@@ -22,8 +22,6 @@ namespace SkinCrabApp.ViewModels
         public async Task LogUser()
         {
             await Shell.Current.GoToAsync($"{nameof(InfoPage)}");
-
         }
-
     }
 }

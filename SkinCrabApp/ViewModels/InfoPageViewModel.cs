@@ -23,6 +23,5 @@ namespace SkinCrabApp.ViewModels
         {
             await Shell.Current.GoToAsync($"//{nameof(MenuPage)}");
         }
-
     }
 }
