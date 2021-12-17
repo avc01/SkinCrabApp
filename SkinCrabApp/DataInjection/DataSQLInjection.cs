@@ -69,7 +69,7 @@ namespace SkinCrabApp.DataInjection
                 Url = "https://lh5.googleusercontent.com/p/AF1QipOFYOfGHQ3GqcX9yesIHkUq2wPH-gR1lbG6TQfg=w408-h408-k-no"
             });
 
-            await SkinCrabService.UpdateClinica(new Clinica
+            await SkinCrabService.CreateClinica(new Clinica
             {
                 Nombre = "Clinica Sin Fronteras",
                 Telefono = "2222-6285",
