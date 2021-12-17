@@ -23,6 +23,8 @@ namespace SkinCrabApp.Models
         [Indexed]
         public int? IdEmfermedad { get; set; }
 
+        public int? IdAutoExamen { get; set; }
+
         // Not Mapped
 
         [Ignore]

@@ -15,7 +15,6 @@ namespace SkinCrabApp.Views
         public InfoPage()
         {
             InitializeComponent();
-           
         }
     }
 }

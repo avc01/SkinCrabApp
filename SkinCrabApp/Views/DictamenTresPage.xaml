@@ -1,27 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SkinCrabApp.Views.DictamenTresPage">
-    <ContentPage.Content>
+<ContentPage
+    x:Class="SkinCrabApp.Views.DictamenTresPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+    x:DataType="viewmodels:DictamenTresPageViewModel"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:DictamenTresPageViewModel />
+    </ContentPage.BindingContext>
 
 
-        <StackLayout BackgroundColor="White">
+    <StackLayout BackgroundColor="White">
+        <ImageButton
+            Margin="20,10,0,10"
+            BackgroundColor="Transparent"
+            Command="{Binding TapBack}"
+            HorizontalOptions="Start"
+            Source="back.png"
+            WidthRequest="50" />
 
-            <Frame BackgroundColor="LightBlue" Padding="20" CornerRadius="0">
-                <Label Text="Melanoma" HorizontalTextAlignment="Center" TextColor="Black" FontSize="30"/>
-            </Frame>
+        <Frame
+            Margin="10,0,10,0"
+            Padding="20"
+            BackgroundColor="#4a87c7"
+            CornerRadius="20">
+            <Label
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                Text="Melanoma"
+                TextColor="Black" />
+        </Frame>
 
-            <Image Source="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/43/ds00190_-ds00439_im04411_mcdc7_melanomathu_jpg.jpg"/>
+        <Image Source="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/43/ds00190_-ds00439_im04411_mcdc7_melanomathu_jpg.jpg" />
 
-            <Frame BackgroundColor="LightGray" Padding="30" CornerRadius="0">
-                <Label Text="El melanoma, el tipo más grave de cáncer de piel, se forma en las células que producen melanina, el pigmento que le da color a la piel. El melanoma también puede manifestarse en los ojos y, rara vez, dentro del cuerpo, como en la nariz o la garganta." HorizontalTextAlignment="Start" TextColor="Black" FontSize="20"/>
-            </Frame>
-            <Frame BackgroundColor="LightGray" Padding="30" CornerRadius="0">
-                <Label Text="Ir a su médico o especialista lo más antes posible, puede utilizar esta aplicación para contactar con nuestros especialistas." HorizontalTextAlignment="Start" TextColor="Black" FontSize="20"/>
-            </Frame>
+        <Frame
+            Margin="10,0,10,0"
+            BackgroundColor="LightGray"
+            CornerRadius="20">
+            <Label
+                FontSize="20"
+                HorizontalTextAlignment="Start"
+                Text="El melanoma, el tipo más grave de cáncer de piel, se forma en las células que producen melanina, el pigmento que le da color a la piel. El melanoma también puede manifestarse en los ojos y, rara vez, dentro del cuerpo, como en la nariz o la garganta."
+                TextColor="Black" />
+        </Frame>
 
-        </StackLayout>
+    </StackLayout>
 
-
-    </ContentPage.Content>
 </ContentPage>

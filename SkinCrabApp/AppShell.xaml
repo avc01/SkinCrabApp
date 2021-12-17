@@ -97,7 +97,7 @@
         <ShellContent ContentTemplate="{DataTemplate local:AutoExamenPage}" Route="AutoExamenPage" />
     </FlyoutItem>
     <FlyoutItem Title="Dictamen" Icon="test.png">
-        <ShellContent ContentTemplate="{DataTemplate local:DictamenUnoPage}" Route="DictamenUnoPage" />
+        <ShellContent ContentTemplate="{DataTemplate local:DictamenPage}" Route="DictamenPage" />
     </FlyoutItem>
     <FlyoutItem Title="Clinicas" Icon="hospital.png">
         <ShellContent ContentTemplate="{DataTemplate local:ClinicaPage}" Route="ClinicaPage" />

@@ -1,27 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SkinCrabApp.Views.DictamenDosPage">
-    <ContentPage.Content>
+<ContentPage
+    x:Class="SkinCrabApp.Views.DictamenDosPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
 
+    <ContentPage.BindingContext>
+        <viewmodels:DictamenDosPageViewModel />
+    </ContentPage.BindingContext>
 
-        <StackLayout BackgroundColor="White">
+    <StackLayout BackgroundColor="White">
 
-            <Frame BackgroundColor="LightBlue" Padding="20" CornerRadius="0">
-                <Label Text="Carcinoma de células escamosas de la piel" HorizontalTextAlignment="Center" TextColor="Black" FontSize="30"/>
-            </Frame>
+        <ImageButton
+            Margin="20,10,0,10"
+            BackgroundColor="Transparent"
+            Command="{Binding TapBack}"
+            HorizontalOptions="Start"
+            Source="back.png"
+            WidthRequest="50" />
 
-            <Image Source="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/36/ds00190_-ds00924_im00892_r7_squamouscellthu_jpg.jpg"/>
+        <Frame
+            Margin="10,0,10,0"
+            BackgroundColor="LightBlue"
+            CornerRadius="20">
+            <Label
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalTextAlignment="Center"
+                Text="Carcinoma de células escamosas de la piel"
+                TextColor="Black" />
+        </Frame>
 
-            <Frame BackgroundColor="LightGray" Padding="30" CornerRadius="0">
-                <Label Text="El carcinoma de células escamosas es una forma común de cáncer de piel que se desarrolla en las células escamosas que componen las capas media y externa de la piel. Generalmente no es mortal pero puede ser muy agresivo." HorizontalTextAlignment="Start" TextColor="Black" FontSize="20"/>
-            </Frame>
-            <Frame BackgroundColor="LightGray" Padding="30" CornerRadius="0">
-                <Label Text="Ir a su médico o especialista lo más antes posible, puede utilizar esta aplicación para contactar con nuestros especialistas." HorizontalTextAlignment="Start" TextColor="Black" FontSize="20"/>
-            </Frame>
+        <Image Source="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/36/ds00190_-ds00924_im00892_r7_squamouscellthu_jpg.jpg" WidthRequest="250" />
 
-        </StackLayout>
+        <Frame
+            Margin="10,0,10,0"
+            BackgroundColor="LightGray"
+            CornerRadius="20">
+            <Label
+                FontSize="17"
+                HorizontalTextAlignment="Start"
+                Text="El carcinoma de células escamosas es una forma común de cáncer de piel que se desarrolla en las células escamosas que componen las capas media y externa de la piel. Generalmente no es mortal pero puede ser muy agresivo."
+                TextColor="Black" />
+        </Frame>
 
+    </StackLayout>
 
-    </ContentPage.Content>
 </ContentPage>
