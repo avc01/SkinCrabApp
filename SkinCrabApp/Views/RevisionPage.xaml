@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SkinCrabApp.Views.RevisionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
+
+
+    <ContentPage.BindingContext>
+        <viewmodels:RevisionPageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Image
+                HorizontalOptions="Center"
+                Source="revision.jpg"
+                VerticalOptions="Center" />
+
+            <Label
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Revisión de Dictamenes" />
+
+            <Label
+                Margin="30,0,30,50"
+                FontAttributes="Italic"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                Text="Podra revisar los dictamenes realizados anteriormente y sus resultados" />
+            <Button
+                Margin="100,0,100,20"
+                BackgroundColor="White"
+                BorderColor="Black"
+                BorderWidth="1"
+                Command="{Binding TapLogin}"
+                CornerRadius="5"
+                Text="Siguiente"
+                VerticalOptions="Center" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

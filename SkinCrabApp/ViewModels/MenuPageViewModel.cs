@@ -34,7 +34,7 @@ namespace SkinCrabApp.ViewModels
 
         public async Task TapLogoutUser()
         {
-            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            await Shell.Current.GoToAsync($"///{nameof(LoginPage)}");
         }
     }
 }
