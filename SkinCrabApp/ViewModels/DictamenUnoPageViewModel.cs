@@ -12,7 +12,6 @@ namespace SkinCrabApp.ViewModels
     public class DictamenUnoPageViewModel : ObservableObject
     {
         public AsyncCommand TapBack { get; set; }
-
         public DictamenUnoPageViewModel()
         {
             TapBack = new AsyncCommand(GoBack);
