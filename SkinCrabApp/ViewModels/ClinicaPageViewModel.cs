@@ -78,8 +78,6 @@ namespace SkinCrabApp.ViewModels
                     Name = "Clinica Sin Fronteras"
                 });
             }
-
-
         }
 
         private async Task Refresh()
