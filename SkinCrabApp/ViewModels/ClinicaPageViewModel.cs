@@ -7,7 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using Xamarin.Essentials;
+=======
+>>>>>>> origin/Main-Testing
 
 namespace SkinCrabApp.ViewModels
 {
@@ -40,6 +43,7 @@ namespace SkinCrabApp.ViewModels
             SelectedClinica = null;
 
             // logica
+<<<<<<< HEAD
             if (clinica.Nombre == "Clinica Central")
             {
                 await Map.OpenAsync(9.9361650, -84.07070275, new MapLaunchOptions
@@ -76,6 +80,8 @@ namespace SkinCrabApp.ViewModels
                 });
             }
 
+=======
+>>>>>>> origin/Main-Testing
         }
 
         private async Task Refresh()

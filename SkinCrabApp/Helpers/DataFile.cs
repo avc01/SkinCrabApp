@@ -73,7 +73,7 @@ namespace SkinCrabApp.Helpers
             return stringBuilder;
         }
 
-        private static async Task<StringBuilder> GenerateFileWithUserAutoExamDataAsync(AutoExamen autoExamen) 
+        private static async Task<StringBuilder> GenerateFileWithUserAutoExamDataAsync(AutoExamen autoExamen)
         {
             StringBuilder stringBuilder = new StringBuilder();
             await Task.Run(() =>

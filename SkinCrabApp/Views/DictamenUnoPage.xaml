@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SkinCrabApp.Views.DictamenUnoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+    x:DataType="viewmodels:DictamenUnoPageViewModel"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:DictamenUnoPageViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+
+        <ImageButton
+            Margin="20,10,0,10"
+            BackgroundColor="Transparent"
+            Command="{Binding TapBack}"
+            HorizontalOptions="Start"
+            Source="back.png"
+            WidthRequest="50" />
+
+        <Frame
+            Margin="10,0,10,0"
+            BackgroundColor="#0000c9"
+            CornerRadius="20">
+            <Label
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                Text="Carcinoma de células Basales"
+                TextColor="White" />
+        </Frame>
+        <Image Source="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/42/ds00190_-ds00925_im00272_basal_gif.jpg" />
+        <Frame
+            Margin="10,0,10,0"
+            BackgroundColor="#2296f3"
+            CornerRadius="20">
+            <Label
+                FontSize="20"
+                HorizontalTextAlignment="Start"
+                Text="El carcinoma basocelular es un tipo de cáncer de piel que comienza en las células basales, un tipo de células que se encuentran en la piel y que producen las células cutáneas nuevas a medida que las viejas mueren."
+                TextColor="Black" />
+        </Frame>
+
+    </StackLayout>
+</ContentPage>

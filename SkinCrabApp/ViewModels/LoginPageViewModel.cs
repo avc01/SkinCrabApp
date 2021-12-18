@@ -38,7 +38,7 @@ namespace SkinCrabApp.ViewModels
 
             var result = await SkinCrabService.GetUsuarioByUserName(NombreUsuario);
 
-            if (result == null)
+            if (result is null)
             {
                 await Application.Current.MainPage.DisplayAlert("Atencion", "usuario no encontrado", "ok");
                 return;
@@ -58,7 +58,8 @@ namespace SkinCrabApp.ViewModels
                 Preferences.Set("currentUser_UsuarioId", $"{result.IdUsuario}");
             });
             await CleanFields();
-            await Shell.Current.GoToAsync($"//{nameof(MenuPage)}");
+            // await Shell.Current.GoToAsync($"//{nameof(MenuPage)}");
+            await Shell.Current.GoToAsync($"{nameof(DeteccionPage)}");
         }
 
         public async Task RegistrarUser()

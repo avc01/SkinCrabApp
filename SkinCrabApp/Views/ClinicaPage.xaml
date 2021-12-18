@@ -1,28 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SkinCrabApp.Views.ClinicaPage">
-    <ListView ItemsSource="{Binding Clinicas} " HasUnevenRows="True" 
-ItemSelected="ListView_ItemSelected" ItemTapped="ListView_ItemTapped">
+<ContentPage
+    x:Class="SkinCrabApp.Views.ClinicaPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:SkinCrabApp.Models"
+    xmlns:viewmodels="clr-namespace:SkinCrabApp.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:DataType="viewmodels:ClinicaPageViewModel">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ClinicaPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:ItemSelectedEventArgsConverter x:Key="ItemSelectedEventArgsConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ListView
+        BackgroundColor="Transparent"
+        CachingStrategy="RecycleElement"
+        HasUnevenRows="True"
+        IsPullToRefreshEnabled="True"
+        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+        ItemsSource="{Binding Clinica}"
+        RefreshCommand="{Binding RefreshCommand}"
+        SelectedItem="{Binding SelectedClinica, Mode=TwoWay}"
+        SeparatorVisibility="None">
+
+        <ListView.Behaviors>
+            <xct:EventToCommandBehavior
+                Command="{Binding SelectedCommand}"
+                EventArgsConverter="{StaticResource ItemSelectedEventArgsConverter}"
+                EventName="ItemSelected" />
+        </ListView.Behaviors>
+
+        <ListView.Header>
+            <Label
+                Margin="0,20,0,10"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="Clinicas Disponibles" />
+        </ListView.Header>
+
         <ListView.ItemTemplate>
-            <DataTemplate>
+            <DataTemplate x:DataType="model:Clinica">
                 <ViewCell>
                     <Grid Padding="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Grid.RowSpan="2" Source="{Binding Url}" Aspect="AspectFill" HorizontalOptions="Center" HeightRequest="60" WidthRequest="60"/>
-                        <Label Grid.Column="1" Text="{Binding Nombre} " FontAttributes="Bold" />
-                        <Label Grid.Row="1"  Grid.Column="1" Text ="{Binding Telefono} "  VerticalOptions="End" />
-                        <Label Grid.Row="2"  Grid.Column="1" Text ="{Binding Direccion} "  VerticalOptions="End" />
+                        <Frame
+                            BackgroundColor="#b3b3b3"
+                            CornerRadius="20"
+                            HasShadow="True">
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                                    HeightRequest="100"
+                                    Source="{Binding Url}"
+                                    WidthRequest="150" />
+                                <StackLayout VerticalOptions="Center">
+                                    <Label
+                                        FontSize="Large"
+                                        Text="{Binding Nombre}"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        FontSize="Large"
+                                        Text="{Binding Telefono}"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        FontSize="Large"
+                                        Text="{Binding Direccion}"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
                     </Grid>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
+
     </ListView>
 </ContentPage>

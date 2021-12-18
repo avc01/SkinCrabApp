@@ -10,7 +10,7 @@ namespace SkinCrabApp.Services
     public static class SkinCrabService
     {
         private static SQLiteAsyncConnection _database;
-
+        
         public static async Task Init() 
         {
             if (_database != null)

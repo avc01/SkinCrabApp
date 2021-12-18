@@ -2,10 +2,12 @@
 using MvvmHelpers.Commands;
 using SkinCrabApp.Helpers;
 using SkinCrabApp.Models;
+using SkinCrabApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -34,6 +36,10 @@ namespace SkinCrabApp.ViewModels
 
             await Application.Current.MainPage.DisplayAlert("Notificacion", "auto examen completado exitosamente", "ok");
             await DataFile.SaveUserAutoExamToFileAsync(autoExamen);
+            var usuario = await SkinCrabService.GetUsuario(int.Parse(Preferences.Get("currentUser_UsuarioId", "default_value")));
+            Random ramdonAuto = new Random();
+            usuario.IdAutoExamen = ramdonAuto.Next(1, 4);
+            await SkinCrabService.UpdateUsuario(usuario);
             await CleanFieldsAsync();
         }
 
